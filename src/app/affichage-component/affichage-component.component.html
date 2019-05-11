@@ -1,0 +1,16 @@
+<p>
+  affichage-component works!
+</p>
+<ul *ngFor="let pokemon of (listePokemon|filterPokemonPipe:'name':pokemonRecherche)">
+  <li>
+    Name: {{pokemon.name}}
+  </li>
+  <li>
+    id: {{pokemon.id}}
+  </li>
+  <h5>Statistiques</h5>
+  <li *ngFor="let stat of pokemon.stats">
+    {{stat}}
+  </li>
+</ul>
+

@@ -1,0 +1,16 @@
+<p>
+  my-component works!
+</p>
+<!--input type="text" id="numero" [(ngModel)]="id">-->
+<p>Pokemons disponibles :</p>
+<select [(ngModel)]="choix">
+  <option *ngFor="let pokemon of (listePokemon|filterPokemonPipe:'name':filtre)">{{pokemon.name}}</option>
+</select>
+<input type="text" [(ngModel)]="filtre">
+<br>
+<br>
+<button (click)="choixPokemon(choix)" routerLink="affichage">Valider choix</button>
+<!--
+<p>{{id.name}}</p>
+<button (click)="choixPokemon(id)">Valider choix</button>
+-->
